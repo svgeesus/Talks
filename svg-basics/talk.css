@@ -66,3 +66,8 @@
 html:not([data-profile="speaker"]) .hint {
 	display: none;
 }
+
+article.placeholder {
+	font-family: Reenie Beanie;
+	color: #777;
+}
