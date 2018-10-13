@@ -46,6 +46,11 @@
 		</svg>
 	</textarea>
 </article>
+
+<article class="slide placeholder" id="viewing">
+	<p>(y-down coodinate system)</p>
+</article>
+
 <!-- end of svg coordinates section-->
 </section>
 
@@ -57,10 +62,10 @@
 
 <article class="slide demo horizontal" id="robot">
 		<textarea class="language-html">
-				<svg viewBox="-35 0 70 40">
-					<rect x="-5" y="19" width="10" height="15"/>
-					<circle cx="0" cy="12" r="7"/>
-				</svg>
+			<svg viewBox="-35 0 70 40">
+				<rect x="-5" y="19" width="10" height="15"/>
+				<circle cx="0" cy="12" r="7"/>
+			</svg>
 		</textarea>
 		<textarea class="language-css">
 			rect, circle {
@@ -71,25 +76,25 @@
 </article>
 
 <article class="slide demo" id="robot-copypaste">
-		<textarea class="language-html">
-				<svg viewBox="-35 0 70 40">
-					<rect x="-5" y="19" width="10" height="15"/>
-					<circle cx="0" cy="12" r="7"/>
-					<!-- copy and paste, hang your head in shame -->
-					<!-- move by x=-20 y=5 -->
-					<rect x="-25" y="24" width="10" height="15"/>
-					<circle cx="-20" cy="17" r="7"/>
-					<!-- move by x=20 y=4 -->
-					<rect x="15" y="23" width="10" height="15"/>
-					<circle cx="20" cy="16" r="7"/>
-				</svg>
-		</textarea>
-		<textarea class="language-css">
-			rect, circle {
-				fill: none;
-				stroke: white;
-			}
-		</textarea>
+	<textarea class="language-html">
+		<svg viewBox="-35 0 70 40">
+			<rect x="-5" y="19" width="10" height="15"/>
+			<circle cx="0" cy="12" r="7"/>
+			<!-- copy and paste, hang your head in shame -->
+			<!-- move by x=-20 y=5 -->
+			<rect x="-25" y="24" width="10" height="15"/>
+			<circle cx="-20" cy="17" r="7"/>
+			<!-- move by x=20 y=4 -->
+			<rect x="15" y="23" width="10" height="15"/>
+			<circle cx="20" cy="16" r="7"/>
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		rect, circle {
+			fill: none;
+			stroke: white;
+		}
+	</textarea>
 </article>
 
 <article class="slide demo horizontal" id="robot-g">
@@ -164,6 +169,96 @@
 
 <article class="slide placeholder" id="path-intro">
 	<p>(animated image of a bezier curve)</p>
+</article>
+
+<article class="slide demo" id="path-line">
+	<textarea class="language-html">
+		<svg viewBox="-10 -10 120 120">
+			<!-- Move to x,y -->
+			<!-- Line to x,y-->
+			<path d="M 0,0 L 100,100" />
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		path {
+			fill: none;
+			stroke: maroon;
+		}
+	</textarea>
+	<h1>Line</h1>
+</article>
+
+<article class="slide demo" id="path-h-v-line">
+	<textarea class="language-html">
+		<svg viewBox="-10 -10 120 120">
+			<!-- Move to x,y -->
+			<!-- Horizontal line to x (same y) -->
+			<path d="M 0,50 H 100" />
+			<!-- Move to x,y -->
+			<!-- Vertical line to (same y), x -->
+			<path d="M 50,0 V 100" />
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		path {
+			fill: none;
+			stroke: maroon;
+		}
+		path+path {
+			stroke: green;
+		}
+	</textarea>
+	<h1>Horizontal, Vertical Lines</h1>
+</article>
+
+<article class="slide demo" id="path-cubic">
+	<textarea class="language-html">
+		<svg viewBox="-10 -10 120 120">
+			<!-- Move to x,y -->
+			<!-- Cubic bezier
+				 handle at x,y
+				 handle at x,y
+				 to x,y-->
+			<path d="M 0,20 C 30,60 70,60 100,20" />
+			<!-- show where the handles are -->
+			<circle cx="30" cy="60" r="2"/>
+			<circle cx="70" cy="60" r="2"/>
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		path {
+			fill: none;
+			stroke: maroon;
+		}
+		circle {
+			fill: yellow;
+		}
+	</textarea>
+	<h1>Cubic Bezier</h1>
+</article>
+
+<article class="slide demo" id="path-quadratic">
+	<textarea class="language-html">
+		<svg viewBox="-10 -10 120 120">
+			<!-- Move to x,y -->
+			<!-- Quadratic bezier
+					handle at x,y
+					to x,y-->
+			<path d="M 0,20 Q 50,80 100,20" />
+			<!-- show where the handle is -->
+			<circle cx="50" cy="80" r="2"/>
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		path {
+			fill: none;
+			stroke: maroon;
+		}
+		circle {
+			fill: yellow;
+		}
+	</textarea>
+	<h1>Quadratic Bezier</h1>
 </article>
 
 	<!-- end of svg paths section-->
