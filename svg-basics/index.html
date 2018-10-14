@@ -297,7 +297,36 @@
 	<h1>Shorthand Cubic Bezier</h1>
 </article>
 
-
+<article class="slide demo" id="path-quadratic-short">
+	<textarea class="language-html">
+		<svg viewBox="-10 -10 120 120">
+			<!-- Move to x,y -->
+			<!-- Quadratic bezier
+				 handle at x1,y1
+				 to x,y -->
+			<!-- Shorthand quadratic
+				 handle at reflection
+				 to x,y -->
+			<path d="M 0,0 Q 5,45 50,50 T 100,100" />
+			<!-- show where the handles are -->
+			<circle cx="5" cy="45" r="2"/>
+			<circle cx="95" cy="55" r="2" class="r"/>
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		path {
+			fill: none;
+			stroke: maroon;
+		}
+		circle {
+			fill: yellow;
+		}
+		circle.r {
+			fill: white;
+		}
+	</textarea>
+	<h1>Shorthand Quadratic Bezier</h1>
+</article>
 
 	<!-- end of svg paths section-->
 </section>
