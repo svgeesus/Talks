@@ -6,6 +6,7 @@
 <title>SVG Basics</title>
 <link href="../../inspire.js/inspire.css" rel="stylesheet" />
 <link href="../../inspire.js/theme.css" rel="stylesheet" />
+<link href="https://dev.mavo.io/dist/mavo.css" rel="stylesheet" >
 <link href="../shared/prism.css" rel="stylesheet" />
 <link href="theme.css" rel="stylesheet" />
 <link href="talk.css" rel="stylesheet" />
@@ -262,39 +263,41 @@
 </article>
 
 <article class="slide demo" id="path-cubic-short">
-		<textarea class="language-html">
-			<svg viewBox="-10 -10 120 120">
-				<!-- Move to x,y -->
-				<!-- Cubic bezier
-					 handle at x1,y1
-					 handle at x2,y2
-					 to x,y-->
-				<!-- Shorthand cubic
-					 handle at reflection
-					 handle at x2,y2
-					 to x,y -->
-				<path d="M 0,0 C 6,30 25,60 50,50 S 94,70 100,100" />
-				<!-- show where the handles are -->
-				<circle cx="6" cy="30" r="2"/>
-				<circle cx="25" cy="60" r="2"/>
-				<circle cx="75" cy="40" r="2" class="r"/>
-				<circle cx="94" cy="70" r="2"/>
-			</svg>
-		</textarea>
-		<textarea class="language-css">
-			path {
-				fill: none;
-				stroke: maroon;
-			}
-			circle {
-				fill: yellow;
-			}
-			circle.r {
-				fill: white;
-			}
-		</textarea>
-		<h1>Shorthand Cubic Bezier</h1>
-	</article>
+	<textarea class="language-html">
+		<svg viewBox="-10 -10 120 120">
+			<!-- Move to x,y -->
+			<!-- Cubic bezier
+					handle at x1,y1
+					handle at x2,y2
+					to x,y-->
+			<!-- Shorthand cubic
+					handle at reflection
+					handle at x2,y2
+					to x,y -->
+			<path d="M 0,0 C 6,30 25,60 50,50 S 94,70 100,100" />
+			<!-- show where the handles are -->
+			<circle cx="6" cy="30" r="2"/>
+			<circle cx="25" cy="60" r="2"/>
+			<circle cx="75" cy="40" r="2" class="r"/>
+			<circle cx="94" cy="70" r="2"/>
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		path {
+			fill: none;
+			stroke: maroon;
+		}
+		circle {
+			fill: yellow;
+		}
+		circle.r {
+			fill: white;
+		}
+	</textarea>
+	<h1>Shorthand Cubic Bezier</h1>
+</article>
+
+
 
 	<!-- end of svg paths section-->
 </section>
@@ -311,6 +314,7 @@
 	<h1>Thank you!</h1>
 </footer>
 
+<script src="https://dev.mavo.io/dist/mavo.min.js"></script>
 <script src="../shared/js/bliss.shy.min.js"></script>
 <script src="../shared/js/prism.js"></script>
 <script src="../../incrementable/incrementable.js"></script>

@@ -1,0 +1,24 @@
+<article class="slide" mv-app id="mavo-short-cubic">
+	<svg viewBox="-10 -10 120 120">
+		<!-- Move to x,y -->
+		<!-- Cubic bezier
+				handle at x1,y1
+				handle at x2,y2
+				to x,y-->
+		<!-- Shorthand cubic
+				handle at reflection
+				handle at x2,y2
+				to x,y -->
+		<path d="M 0,0 C [cx1],[cy1] [cx2],[cy2] 50,50 S [sx2],[sy2] 100,100" />
+		<!-- show where the handles are -->
+		<circle cx="[cx1]" cy="[cy1]" r="2"/>
+		<circle cx="[cx2]" cy="[cy2]" r="2"/>
+		<!-- <circle cx="75" cy="40" r="2" class="r"/> -->
+		<circle cx="[100-cx2]" cy="[100-cy2]" r="2" class="r"/>
+		<circle cx="[sx2]" cy="[sy2]" r="2"/>
+	</svg>
+	<p>C1: <span property="cx1">6</span>, <span property="cy1">30</span></p>
+	<p>C2: <span property="cx2">25</span>, <span property="cy2">60</span></p>
+	<!-- 75 40 -->
+	<p>S2: <span property="sx2">94</span>, <span property="sy2">70</span></p>
+</article>
