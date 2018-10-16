@@ -33,8 +33,10 @@
 </article>
 
 <article class="slide placeholder" id="viewing">
-	<img src="img/hearts.svg" alt="demo image" id="graphic"/>
-	<!-- <p>(animated image of vector shape filling various viewports)</p> -->
+	<div>
+		<img src="img/hearts.svg" alt="demo image" id="graphic"/>
+		<div class="placeholder"></div>
+	</div>
 </article>
 
 <article class="slide" id="lcs">
@@ -51,8 +53,11 @@
 	</code></pre>
 </article>
 
-<article class="slide placeholder" id="ydown">
-	<p>(y-down coodinate system)</p>
+<article class="slide" id="y-down">
+	<div>(0, 0)
+		<span class="x">x</span>
+		<span class="y">y</span>
+	</div>
 </article>
 
 <!-- end of svg coordinates section-->
@@ -65,18 +70,30 @@
 </header>
 
 <article class="slide demo horizontal" id="robot">
-		<textarea class="language-html">
-			<svg viewBox="-35 0 70 40">
-				<rect x="-5" y="19" width="10" height="15"/>
-				<circle cx="0" cy="12" r="7"/>
-			</svg>
-		</textarea>
-		<textarea class="language-css">
-			rect, circle {
-				fill: none;
-				stroke: white;
-			}
-		</textarea>
+	<textarea class="language-html">
+		<svg viewBox="-35 0 70 40">
+			<rect x="-5" y="19" width="10" height="15"/>
+			<circle cx="0" cy="12" r="7"/>
+		</svg>
+	</textarea>
+	<textarea class="language-css">
+		rect, circle {
+			fill: none;
+			stroke: white;
+		}
+	</textarea>
+	<details class="notes">
+		<summary>Shape primitives</summary>
+		<ul>
+			<li>Shape primitives are not very flexible, but are easier to specify.</li>
+			<li>You can create rectangles with the <code class="svg element">rect</code> element.
+				The attributes <code>x</code> and <code>y</code> control the coordinates of its top left corner,
+				and <code>width</code> and <code>height</code> control its dimensions.</li>
+			<li>You can create circles with the <code class="svg element">circle</code> element.
+				The attributes <code>cx</code> and <code>cy</code> control the centerpoint placement and <code>r</code> controls the radius.</li>
+			<li>If a parameter is <code>0</code>, it can be omitted.</li>
+		</ul>
+	</details>
 </article>
 
 <article class="slide demo" id="robot-copypaste">
@@ -171,8 +188,23 @@
 	<h1>An actual spline</h1>
 </article>
 
-<article class="slide placeholder" id="path-intro">
-	<p>(animated image of a bezier curve)</p>
+<article class="slide" id="path-intro" mv-app>
+	<div class="sliders">
+		<label>x1 = [x1] <input type="range" property="x1" value="30"></label>
+		<label>y1 = [y1] <input type="range" property="y1"></label>
+		<label>x2 = [x2] <input type="range" property="x2" value="70"></label>
+		<label>y2 = [y2]<input type="range" property="y2"></label>
+	</div>
+
+	<svg viewBox="0 0 100 100">
+		<path d="M 0,100 C [x1],[y1] [x2],[y2] 100,100" />
+		<line x1="0" y1="100" x2="[x1]" y2="[y1]" />
+		<circle cx="[x1]" cy="[y1]" id="handle-1" />
+		<line x1="100" y1="100" x2="[x2]" y2="[y2]" />
+		<circle cx="[x2]" cy="[y2]" id="handle-2" />
+		<rect width="5" height="5" x="-2.5" y="97.5"></rect>
+		<rect width="5" height="5" x="97.5" y="97.5"></rect>
+	</svg>
 </article>
 
 <article class="slide demo" id="path-line">
@@ -505,7 +537,7 @@
 <script src="../shared/js/prism.js"></script>
 <script src="../../incrementable/incrementable.js"></script>
 <script src="../../inspire.js/inspire.js"></script>
-<!-- <script src="talk.js"></script> -->
+<script src="talk.js"></script>
 
 </body>
 </html>

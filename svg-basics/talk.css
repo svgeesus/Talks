@@ -107,3 +107,212 @@ article.placeholder {
 #mavo-short-cubic circle.r {
 	fill: cyan;
 } */
+
+@keyframes viewing {
+	10%, 60% {
+		width: var(--large);
+	}
+
+	10%, 20%,
+	50%, 80% {
+		height: var(--large);
+	}
+
+	10%,
+	60% {
+		left: 100%;
+	}
+
+	10%, 20%,
+	50%, 80% {
+		top: 100%;
+	}
+
+	10%, 20%,
+	50%, 60% {
+		transform: translate(-100%, -100%);
+		object-fit: contain;
+	}
+
+	30%, 40% {
+		top: 0;
+		height: var(--small);
+		transform: translate(-100%, 0%);
+	}
+
+	70%, 80% {
+		left: 0;
+		width: var(--small);
+		transform: translate(0%, -100%);
+	}
+
+	70%, to {
+		object-fit: cover;
+	}
+}
+
+#viewing {
+	--small: 20vmin;
+	--large: 65vmin;
+}
+
+#viewing > div {
+	position: relative;
+	width: calc(100vmin - 5rem);
+	height: calc(100vmin - 2rem);
+}
+
+#viewing img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--small);
+	height: var(--small);
+	border: 1px solid hsla(0,0%,100%,.3);
+}
+
+#viewing:target img {
+	animation: 6s viewing both infinite;
+}
+
+	#viewing .placeholder::before,
+	#viewing .placeholder::after,
+	#viewing > div::before,
+	#viewing > div::after {
+		content: "";
+		top: 0;
+		left: 0;
+		width: var(--small);
+		height: var(--small);
+		position: absolute;
+		border: 1px solid hsla(0,0%,100%,.2);
+	}
+
+	#viewing > div::before,
+	#viewing .placeholder::before {
+		width: var(--large);
+		left: 100%;
+		transform: translate(-100%, 0%);
+	}
+
+	#viewing > div::after,
+	#viewing .placeholder::before {
+		height: var(--large);
+		top: 100%;
+		transform: translate(0%, -100%);
+	}
+
+	#viewing .placeholder::before {
+		transform: translate(-100%, -100%);
+	}
+
+#path-intro {
+	font-family: var(--font-handwritten);
+	color: #777;
+}
+
+	#path-intro svg {
+		overflow: visible;
+		xbackground: hsl(0,0%,90%,.3)
+	}
+
+	#path-intro path {
+		fill: none;
+		stroke: white;
+		stroke-width: 2px;
+		stroke-linecap: round;
+	}
+
+	#path-intro circle,
+	#path-intro line,
+	#path-intro rect {
+		stroke: hsl(220, 10%, 60%);
+	}
+
+	#path-intro circle {
+		fill: var(--color1);
+
+		r: 3;
+	}
+
+	#path-intro line,
+	#path-intro rect {
+
+	}
+
+	#path-intro rect {
+		fill: var(--light1);
+		xstroke: black;
+
+		stroke-width: .6px;
+	}
+
+	#path-intro .sliders {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-flow: column;
+	}
+
+		#path-intro label {
+			margin: .25em .5em;
+			flex: 1;
+			white-space: nowrap;
+			line-height: 1;
+		}
+
+		#path-intro label:nth-child(3) {
+			margin-top: 1em;
+		}
+
+			#path-intro label input {
+				display: block;
+			}
+
+#y-down {
+
+}
+
+	#y-down div {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: 1fr auto;
+		width: calc(100vmin - 2em);
+		height: calc(100vmin - 2em);
+		padding: 1em 0 0 1em;
+		box-sizing: border-box;
+		background: linear-gradient(white, white) 0 0 / 1px 100% repeat-y,
+		linear-gradient(white, white) 0 0 / 100% 1px repeat-x;
+		background-origin: content-box;
+		background-clip: border-box;
+		line-height: 2;
+		text-indent: .6em;
+	}
+
+		#y-down div span {
+
+		}
+
+		#y-down .y::before {
+			content: "";
+			position: absolute;
+			background: white;
+			width: .3em;
+			height: .4em;
+			clip-path: polygon(0 0, 100% 0, 50% 100%);
+			left: .85em;
+			top: 100%;
+		}
+
+		#y-down .x::before {
+			content: "";
+			position: absolute;
+			background: white;
+			width: .4em;
+			height: .3em;
+			clip-path: polygon(0 0, 0 100%, 100% 50%);
+			top: .85em;
+			left: 100%;
+		}
