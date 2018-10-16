@@ -72,6 +72,29 @@ article.placeholder {
 	color: #777;
 }
 
+
+
+.poop.slide {
+
+}
+
+	.poop.slide span.poop {
+	animation: poop-dance .8s 2s infinite alternate ease-in-out;
+	display: inline-block;
+	font-size: 20vh;
+	line-height: 1.2;
+	}
+
+	@keyframes poop-dance {
+		from, 49% { transform-origin: -50% 100%; }
+		50%, 75%, to { transform-origin: 150% 100%; }
+		25% { transform: rotate(-10deg); }
+		50% { transform: rotate(0deg); }
+		75% { transform: rotate(10deg); }
+	}
+
+
+
 /* #mavo-short-cubic path {
 	fill: none;
 	stroke: white;
