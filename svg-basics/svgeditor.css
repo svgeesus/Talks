@@ -1,0 +1,224 @@
+@charset "UTF-8";
+body > header h1 a, body > header h1 button, body > header h1 .mv-button, .editor > h1 details summary {
+  display: inline-block;
+  vertical-align: bottom;
+  padding: .4em .8em;
+  border-radius: .3em;
+  margin: 0 .3em;
+  cursor: pointer;
+  background: rgba(115, 123, 140, 0.7);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  line-height: 1.25;
+  font-weight: bold; }
+  body > header h1 a:hover, body > header h1 button:hover, body > header h1 .mv-button:hover, .editor > h1 details summary:hover, body > header h1 a:focus, body > header h1 button:focus, body > header h1 .mv-button:focus, .editor > h1 details summary:focus {
+    background: #737b8c; }
+
+body {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  height: 100vh;
+  font: 100%/1.5 sans-serif; }
+  body > h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 350%; }
+
+body > header {
+  display: flex;
+  align-items: center;
+  padding: .5em;
+  background: #737b8c;
+  color: white; }
+  body > header .mv-bar {
+    display: inline; }
+    body > header .mv-bar .mv-clear::before {
+      content: "❌ ";
+      vertical-align: 0; }
+    body > header .mv-bar .mv-export::before {
+      content: "⬇️ "; }
+    body > header .mv-bar .mv-import::before {
+      content: "⬆️ "; }
+  body > header h1 {
+    flex: 1;
+    margin: 0;
+    font-size: 130%;
+    line-height: 1;
+    letter-spacing: -.05em; }
+    body > header h1 a, body > header h1 button, body > header h1 .mv-button {
+      padding: .5em .6em .3em;
+      border: 0;
+      background: white;
+      letter-spacing: normal; }
+      body > header h1 a:hover, body > header h1 a:active, body > header h1 a:focus, body > header h1 button:hover, body > header h1 button:active, body > header h1 button:focus, body > header h1 .mv-button:hover, body > header h1 .mv-button:active, body > header h1 .mv-button:focus {
+        background: rgba(255, 255, 255, 0.4); }
+      body > header h1 a:not(:hover):not(:active):not(:focus), body > header h1 button:not(:hover):not(:active):not(:focus), body > header h1 .mv-button:not(:hover):not(:active):not(:focus) {
+        color: #737b8c; }
+  body > header input[type=number] {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white; }
+  body > header input[type=range] {
+    width: 2em; }
+  body > header > section {
+    padding: 0 .5em; }
+
+main {
+  flex: 1;
+  display: flex; }
+
+main > section > h1 {
+  font-weight: 300;
+  font-size: 200%; }
+
+.editor {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  padding: 0 1em 1em; }
+  .editor > h1 details {
+    font-size: 1rem; }
+    .editor > h1 details ::-webkit-details-marker {
+      display: none; }
+    .editor > h1 details summary::before {
+      content: "Show "; }
+    .editor > h1 details:not([open]) {
+      display: inline-block; }
+    .editor > h1 details[open] summary {
+      margin-bottom: .5em; }
+      .editor > h1 details[open] summary::before {
+        content: "Hide "; }
+  .editor > h1 textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font: 100% Consolas, Monaco, monospace;
+    white-space: normal; }
+  .editor > div {
+    flex: 1;
+    overflow: auto; }
+  .editor .mv-add-segment {
+    font-size: 130%;
+    font-weight: bold;
+    letter-spacing: -.05em; }
+
+.preview {
+  display: flex;
+  flex-flow: column;
+  width: 50vw; }
+  .preview svg {
+    flex: 1;
+    background: #e6e6e6;
+    display: block;
+    overflow: visible; }
+    .preview svg circle {
+      fill: red; }
+    .preview svg pattern {
+      stroke: black;
+      stroke-width: 2px;
+      stroke-opacity: .15; }
+    .preview svg * {
+      transform-box: fill-box; }
+
+[property=segment] {
+  --color: hsl(220, 10%, 50%);
+  position: relative;
+  margin: .8em 0;
+  border: 1px solid var(--color);
+  border-radius: .3em;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) var(--color); }
+  [property=segment].mv-deleted {
+    padding: 1em; }
+    [property=segment].mv-deleted::before {
+      content: none; }
+  [property=segment] .mv-item-bar {
+    position: static;
+    opacity: 1 !important;
+    border: 0; }
+    [property=segment] .mv-item-bar:not(:hover):not(:focus) {
+      mix-blend-mode: multiply; }
+  [property=segment] h1 {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    padding-left: 3em;
+    margin: 0;
+    background: var(--color);
+    color: rgba(255, 255, 255, 0.8); }
+    [property=segment] h1 input[type=number] {
+      border-color: rgba(255, 255, 255, 0.5);
+      color: white; }
+  [property=segment]::before {
+    content: attr(data-segtype);
+    min-width: 1em;
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    padding: .3em;
+    border-radius: 50%;
+    margin-right: .5em;
+    color: var(--color);
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 120%;
+    text-align: center;
+    line-height: 1; }
+  [property=segment].absolute::before {
+    text-transform: uppercase; }
+  [property=segment][data-segtype="m"] {
+    --color: hsl(90, 50%, 45%); }
+  [property=segment][data-segtype="l"] {
+    --color: #f47; }
+  [property=segment][data-segtype="h"] {
+    --color: hsl(210, 40%, 50%); }
+  [property=segment][data-segtype="v"] {
+    --color: hsl(10, 70%, 45%); }
+  [property=segment][data-segtype="a"] {
+    --color: hsl(170, 40%, 50%); }
+  [property=segment] label {
+    margin-right: .5em; }
+  [property=segment] input[type=number] {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.3); }
+  [property=segment] > div {
+    padding: 1em; }
+
+input[type=number] {
+  width: 3em;
+  border-radius: .2em;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid; }
+
+select[property="type"] {
+  margin-right: auto;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font: inherit;
+  font-size: 120%;
+  font-weight: 200;
+  width: 10em; }
+  select[property="type"] option {
+    background: var(--color); }
+
+label {
+  display: inline-block; }
+
+fieldset {
+  border: 1px solid silver;
+  border-radius: .4em; }
+
+fieldset > label {
+  width: 24%; }
+
+input {
+  padding: .1em .4em;
+  font: inherit; }
+
+button {
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="http://www.w3.org/1999/xlink" viewBox="-110 -110 220 220">
+    <style>
+        .a {
+            fill: hsl(-10, 90%, 60%);
+        }
+        .b {
+            fill: hsla(-20, 90%, 70%, 0.8);
+        }
+        .c {
+            fill: url(#g1);
+        }
+        .d {
+            fill: none;
+            stroke-width: 5px;
+        }
+        .a, .d {
+            stroke: maroon;
+            stroke-dashoffset: 7 4;
+        }
+    </style>
+	<defs>
+		<path d="M 0, -40
+		C 14,-72 47,-77 47,-40
+		C 43,-6 20,-30 0,10
+		C -20,-30 -43,-6 -47,-40
+		C -47,-77 -14,-72 0,-40 z"  id="x"/>
+	</defs>
+	<use x:href="#x" class="a" x="-20" y="-20" />
+	<use x:href="#x" class="b" x="20" y="20" />
+	<use x:href="#x" class="c" x="-40" y="40" />
+	<use x:href="#x" class="d" x="60" y="60" />
+	<linearGradient id="g1">
+		<stop offset="5%" stop-color="#e66465"/>
+		<stop offset="50%" stop-opacity="0.1"/>
+		<stop offset="95%" stop-color="#9198e5"/>
+	</linearGradient>
+</svg>

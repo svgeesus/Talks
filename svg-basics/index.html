@@ -81,7 +81,7 @@
 		<svg viewBox="-35 0 70 40">
 			<rect x="-5" y="19" width="10" height="15"/>
 			<circle cx="0" cy="12" r="7"/>
-			<!-- copy and paste, hang your head in shame -->
+			<!-- copy, paste, and edit: hang your head in shame -->
 			<!-- move by x=-20 y=5 -->
 			<rect x="-25" y="24" width="10" height="15"/>
 			<circle cx="-20" cy="17" r="7"/>
@@ -101,7 +101,7 @@
 <article class="slide demo horizontal" id="robot-g">
 	<textarea class="language-html">
 		<svg viewBox="-35 0 70 40">
-			<g class="robot" id="prime">
+			<g class="robot" id="prime-one">
 				<rect x="-5" y="19" width="10" height="15"/>
 				<circle cx="0" cy="12" r="7"/>
 			</g>
@@ -118,12 +118,12 @@
 <article class="slide demo horizontal" id="robot-use">
 	<textarea class="language-html">
 		<svg viewBox="-35 0 70 40">
-			<g class="robot" id="prime">
+			<g class="robot" id="prime2">
 				<rect x="-5" y="19" width="10" height="15"/>
 				<circle cx="0" cy="12" r="7"/>
 			</g>
-			<use href="#prime" transform="translate(-20,5)"/>
-			<use href="#prime" transform="translate(20,4)"/>
+			<use href="#prime2" transform="translate(-20,5)"/>
+			<use href="#prime2" transform="translate(20,4)"/>
 		</svg>
 	</textarea>
 	<textarea class="language-css">
@@ -137,14 +137,14 @@
 <article class="slide demo horizontal speaker-only" id="robot-use-answer">
 	<textarea class="language-html">
 		<svg viewBox="-35 0 70 40">
-			<g class="robot" id="prime">
+			<g class="robot" id="prime3">
 				<rect x="-5" y="19" width="10" height="15"/>
 				<circle cx="0" cy="12" r="7"/>
 				<circle cx="2" cy="12" r="1"/>
 				<circle cx="-2" cy="12" r="1"/>
 			</g>
-			<use href="#prime" transform="translate(-20,5)"/>
-			<use href="#prime" transform="translate(20,4)"/>
+			<use href="#prime3" transform="translate(-20,5)"/>
+			<use href="#prime3" transform="translate(20,4)"/>
 		</svg>
 	</textarea>
 	<textarea class="language-css">
@@ -360,6 +360,12 @@
 	<h2><span class="poop"><img src="../shared/img/poop.png" alt="💩"></span></h2>
 </article>
 
+<!-- <article class="slide" data-src="https://mavo.io/demos/svgpath/" id="mavopath">
+</article> -->
+
+<article class="slide image" style="background-image: url(img/mavo-svgpath.png)">
+<h1>Exercise: <a href="https://mavo.io/demos/svgpath/">SVG Paths</a></h1></article>
+
 	<!-- end of svg paths section-->
 </section>
 
@@ -390,7 +396,7 @@
 			fill: hsl(-10, 90%, 60%);
 		}
 		.b {
-			fill: hsl(-20, 90%, 70%)
+			fill: hsla(-20, 90%, 70%, 0.8);
 		}
 		.c {
 			fill: linear-gradient(#e66465, #9198e5);
@@ -422,8 +428,8 @@
 				<use href="#x" class="c" x="-40" y="40" />
 				<use href="#x" class="d" x="60" y="60" />
 				<linearGradient id="g1">
-					<stop offset="0%" stop-color="#e66465"/>
-					<stop offset="100%" stop-color="#9198e5"/>
+					<stop offset="5%" stop-color="#e66465"/>
+					<stop offset="95%" stop-color="#9198e5"/>
 				</linearGradient>
 			</svg>
 		</textarea>
@@ -432,7 +438,7 @@
 				fill: hsl(-10, 90%, 60%);
 			}
 			.b {
-				fill: hsl(-20, 90%, 70%)
+				fill: hsla(-20, 90%, 70%, 0.8);
 			}
 			.c {
 				fill: url(#g1);
@@ -461,7 +467,7 @@
 <script src="../shared/js/prism.js"></script>
 <script src="../../incrementable/incrementable.js"></script>
 <script src="../../inspire.js/inspire.js"></script>
-<script src="talk.js"></script>
+<!-- <script src="talk.js"></script> -->
 
 </body>
 </html>
