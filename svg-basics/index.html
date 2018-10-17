@@ -117,13 +117,9 @@
 		}
 	</textarea>
 	<details class="notes">
-		<summary>Re-using SVG markup</summary>
+		<summary>Copy and paste</summary>
 		<ul>
-			<li>The <code class="svg element">use</code> element allows us to re-use SVG markup, even across documents!</li>
-			<li>Ever heard of Shadow DOM? This is where it came from. No, seriously!</li>
-			<li>You cannot override attributes set on the definition elements via <code class="svg element">use</code></li>
-			<li>Note that for legacy browsers you will need to use <code class="svg attribute">xlink:href</code> instead of <code class="svg attribute">href</code>.
-			You will also need to add <code>xmlns:xlink="http://www.w3.org/1999/xlink"</code> to your root <code class="svg element">svg</code> element.</li>
+			<li>This seems easier at first, but soon you have to change (copies of) the same thing all over the place. And keep track of the changes from one copy to the next.</li>
 		</ul>
 	</details>
 </article>
@@ -162,6 +158,16 @@
 			stroke: white;
 		}
 	</textarea>
+	<details class="notes">
+		<summary>Re-using SVG markup</summary>
+		<ul>
+			<li>The <code class="svg element">use</code> element allows us to re-use SVG markup, even across documents!</li>
+			<li>Ever heard of Shadow DOM? This is where it came from. No, seriously!</li>
+			<li>You cannot override attributes set on the definition elements via <code class="svg element">use</code></li>
+			<li>Note that for legacy browsers you will need to use <code class="svg attribute">xlink:href</code> instead of <code class="svg attribute">href</code>.
+			You will also need to add <code>xmlns:xlink="http://www.w3.org/1999/xlink"</code> to your root <code class="svg element">svg</code> element.</li>
+		</ul>
+	</details>
 </article>
 
 <article class="slide demo horizontal speaker-only" id="robot-use-answer">
@@ -365,9 +371,9 @@
 		}
 	</textarea>
 	<details class="notes">
-		<summary>Shorthand Cubic Bezier</summary>
+		<summary>Smooth Cubic Bezier</summary>
 		<ul>
-			<li>The "shorthand" cubic bezier command creates smooth curves by reflecting the last control handle.</li>
+			<li>The smooth (or "shorthand") cubic bezier command creates smooth curves by reflecting the last control handle. The curves join together without ugly kinks.</li>
 		</ul>
 	</details>
 </article>
@@ -401,7 +407,7 @@
 		}
 	</textarea>
 	<details class="notes">
-		<summary>Shorthand Quadratic Bezier</summary>
+		<summary>Smooth Quadratic Bezier</summary>
 		<ul>
 			<li>This is a combination of quadratic beziers and the shorthand cubic bezier syntax, thus eliminating all arguments beyond the endpoint.</li>
 		</ul>
@@ -433,6 +439,7 @@
 		<ul>
 			<li>The <code>A</code>/<code>a</code> path commands create circular or elliptical arcs.</li>
 			<li>Their arguments are the two radii (usually equal), the rotation (usually 0), two 0-1 flags for which of the four possible arcs to use, and the endpoint.</li>
+			<li>Yes, that isn't the usual way to specify an ellipse. Like other path commands, we start with a current point, and end up with the current point for the next command.</li>
 		</ul>
 	</details>
 </article>
