@@ -70,7 +70,7 @@
 </header>
 
 <article class="slide demo horizontal" id="robot">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-35 0 70 40">
 			<rect x="-5" y="19" width="10" height="15"/>
 			<circle cx="0" cy="12" r="7"/>
@@ -97,7 +97,7 @@
 </article>
 
 <article class="slide demo" id="robot-copypaste">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-35 0 70 40">
 			<rect x="-5" y="19" width="10" height="15"/>
 			<circle cx="0" cy="12" r="7"/>
@@ -119,7 +119,7 @@
 </article>
 
 <article class="slide demo horizontal" id="robot-g">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-35 0 70 40">
 			<g class="robot" id="prime-one">
 				<rect x="-5" y="19" width="10" height="15"/>
@@ -136,7 +136,7 @@
 </article>
 
 <article class="slide demo horizontal" id="robot-use">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-35 0 70 40">
 			<g class="robot" id="prime2">
 				<rect x="-5" y="19" width="10" height="15"/>
@@ -155,7 +155,7 @@
 </article>
 
 <article class="slide demo horizontal speaker-only" id="robot-use-answer">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-35 0 70 40">
 			<g class="robot" id="prime3">
 				<rect x="-5" y="19" width="10" height="15"/>
@@ -208,7 +208,7 @@
 </article>
 
 <article class="slide demo" id="path-line">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Line to x,y-->
@@ -231,7 +231,7 @@
 </article>
 
 <article class="slide demo" id="path-h-v-line">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Horizontal line to x (same y) -->
@@ -259,7 +259,7 @@
 </article>
 
 <article class="slide demo" id="path-cubic">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Cubic bezier
@@ -290,7 +290,7 @@
 </article>
 
 <article class="slide demo" id="path-quadratic">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Quadratic bezier
@@ -320,7 +320,7 @@
 </article>
 
 <article class="slide demo" id="path-cubic-short">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Cubic bezier
@@ -360,7 +360,7 @@
 </article>
 
 <article class="slide demo" id="path-quadratic-short">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Quadratic bezier
@@ -393,7 +393,7 @@
 </article>
 
 <article class="slide demo" id="path-eliparc">
-	<textarea class="language-html">
+	<textarea class="language-markup">
 		<svg viewBox="-10 -10 120 120">
 			<!-- Move to x,y -->
 			<!-- Elliptical arc
@@ -429,9 +429,20 @@
 <!-- <article class="slide" data-src="https://mavo.io/demos/svgpath/" id="mavopath">
 </article> -->
 
-<article class="slide image" style="background-image: url(img/mavo-svgpath.png)">
+<article class="slide image interactive" style="background-image: url(img/mavo-svgpath.png)">
 <h1>Exercise: <a href="https://mavo.io/demos/svgpath/">SVG Paths</a></h1></article>
 
+<article class="slide">
+	<svg viewBox="0 0 100 100">
+		<path d="m 0 0 v 48 a 50 50 0 0 0 100 0 v -48 l -19 15 a 80 80 0 0 0 -62 0 z " fill="white" />
+	</svg>
+</article>
+
+<article class="slide">
+	<svg viewBox="0 0 100 100">
+		<path d="m 0 0 v 48 a 50 50 0 0 0 100 0 v -48 l -19 15 a 80 80 0 0 0 -62 0 z m 20 45 a 14 14 0 0 0 25 0 a 13 13 0 0 0 -25 0 z m 35 0 a 14 14 0 0 0 25 0 a 13 13 0 0 0 -25 0" fill-rule="evenodd" fill="white" />
+	</svg>
+</article>
 	<!-- end of svg paths section-->
 </section>
 
@@ -442,14 +453,22 @@
 </header>
 
 <article class="slide demo" id="fill">
-	<textarea class="language-html">
+	<!--
+	Old heart:
+	M 0, -40
+	C 14,-72 47,-77 47,-40
+	C 43,-6 20,-30 0,10
+	C -20,-30 -43,-6 -47,-40
+	C -47,-77 -14,-72 0,-40 z
+	 -->
+	<textarea class="language-markup">
 		<svg viewBox="-110 -110 220 220">
 			<defs>
-				<path d="M 0, -40
-				C 14,-72 47,-77 47,-40
-				C 43,-6 20,-30 0,10
-				C -20,-30 -43,-6 -47,-40
-				C -47,-77 -14,-72 0,-40 z"  id="x"/>
+				<path d="M -10, -40
+				    c 6,-17 50,-22 49.8,5
+				    c 0,30 -37,20 -49.8,46.4
+				    c -12,-27 -50,-15 -49.6,-46.5
+				    c 0,-27 41,-22 49.6,-4.9 z"  id="x"/>
 			</defs>
 			<use href="#x" class="a" x="-20" y="-20" />
 			<use href="#x" class="b" x="20" y="20" />
@@ -480,16 +499,15 @@
 		</details>
 	</article>
 
-
 	<article class="slide demo" id="fill2">
-		<textarea class="language-html">
+		<textarea class="language-markup">
 			<svg viewBox="-110 -110 220 220">
 				<defs>
-					<path d="M 0, -40
-					C 14,-72 47,-77 47,-40
-					C 43,-6 20,-30 0,10
-					C -20,-30 -43,-6 -47,-40
-					C -47,-77 -14,-72 0,-40 z"  id="x"/>
+					<path d="M -10, -40
+					    c 6,-17 50,-22 49.8,5
+					    c 0,30 -37,20 -49.8,46.4
+					    c -12,-27 -50,-15 -49.6,-46.5
+					    c 0,-27 41,-22 49.6,-4.9 z"  id="x"/>
 				</defs>
 				<use href="#x" class="a" x="-20" y="-20" />
 				<use href="#x" class="b" x="20" y="20" />
@@ -522,6 +540,25 @@
 		<details class="notes">
 			<summary>Fill &amp; Stroke</summary>
 		</details>
+	</article>
+
+	<article class="slide demo">
+		<textarea class="language-markup">
+			<svg viewBox="0 0 100 100">
+				<path id="heart" d="M 50, 15
+		    c 6,-17 50,-22 49.8,5
+		    c 0,30 -37,20 -49.8,46.4
+		    c -12,-27 -50,-15 -49.6,-46.5
+		    c 0,-27 41,-22 49.6,-4.9 z" />
+			</svg>
+		</textarea>
+		<textarea class="language-css">
+			#heart {
+				stroke: #f06;
+				fill: none;
+				stroke-dasharray: 0 9999;
+			}
+		</textarea>
 	</article>
 
 <!-- end of fill and stroke section -->
