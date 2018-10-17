@@ -116,6 +116,16 @@
 			stroke: white;
 		}
 	</textarea>
+	<details class="notes">
+		<summary>Re-using SVG markup</summary>
+		<ul>
+			<li>The <code class="svg element">use</code> element allows us to re-use SVG markup, even across documents!</li>
+			<li>Ever heard of Shadow DOM? This is where it came from. No, seriously!</li>
+			<li>You cannot override attributes set on the definition elements via <code class="svg element">use</code></li>
+			<li>Note that for legacy browsers you will need to use <code class="svg attribute">xlink:href</code> instead of <code class="svg attribute">href</code>.
+			You will also need to add <code>xmlns:xlink="http://www.w3.org/1999/xlink"</code> to your root <code class="svg element">svg</code> element.</li>
+		</ul>
+	</details>
 </article>
 
 <article class="slide demo horizontal" id="robot-g">
@@ -224,7 +234,8 @@
 	<details class="notes">
 		<summary>Lines</summary>
 		<ul>
-			<li>You can define lines with the <code>L</code> path command</li>
+			<li>You can define lines with the <code>L</code> path command. Its two arguments are the endpoint coordinates.</li>
+			<li>You can use a lowercase <code>l</code> for endpoint coordinates that are relative to the starting point.</li>
 			<li>You can also define lines with the <code class="svg element">line</code> element</li>
 		</ul>
 	</details>
@@ -254,6 +265,7 @@
 		<summary>Horizontal, Vertical Lines</summary>
 		<ul>
 			<li>You can use the <code>H</code> and <code>V</code> path commands to create horizontal and vertical lines.</li>
+			<li>You can use lowercase <code>h</code> and <code>v</code> for endpoint coordinates that are relative to the starting point.</li>
 		</ul>
 	</details>
 </article>
@@ -285,6 +297,7 @@
 		<summary>Cubic Bezier</summary>
 		<ul>
 			<li>You can use the <code>C</code> path command to create cubic beziers.</li>
+			<li>Every other path command can be simulated (either exactly or closely) with cubic beziers. They are at the root of every drawing application.</li>
 		</ul>
 	</details>
 </article>
@@ -354,7 +367,7 @@
 	<details class="notes">
 		<summary>Shorthand Cubic Bezier</summary>
 		<ul>
-			<li></li>
+			<li>The "shorthand" cubic bezier command creates smooth curves by reflecting the last control handle.</li>
 		</ul>
 	</details>
 </article>
@@ -389,6 +402,9 @@
 	</textarea>
 	<details class="notes">
 		<summary>Shorthand Quadratic Bezier</summary>
+		<ul>
+			<li>This is a combination of quadratic beziers and the shorthand cubic bezier syntax, thus eliminating all arguments beyond the endpoint.</li>
+		</ul>
 	</details>
 </article>
 
@@ -414,6 +430,10 @@
 	</textarea>
 	<details class="notes">
 		<summary>Elliptical Arc</summary>
+		<ul>
+			<li>The <code>A</code>/<code>a</code> path commands create circular or elliptical arcs.</li>
+			<li>Their arguments are the two radii (usually equal), the rotation (usually 0), two 0-1 flags for which of the four possible arcs to use, and the endpoint.</li>
+		</ul>
 	</details>
 </article>
 
@@ -559,6 +579,13 @@
 				stroke-dasharray: 0 9999;
 			}
 		</textarea>
+		<details class="notes">
+			<summary>Animated drawing with stroke-dasharray</summary>
+			<ul>
+				<li>If the stroke gap is sufficiently large, animating the dash length looks like drawing the shape with a pencil!</li>
+				<li><code class="css property">stroke-dasharray</code> can be animated with CSS animations!</li>
+			</ul>
+		</details>
 	</article>
 
 <!-- end of fill and stroke section -->
