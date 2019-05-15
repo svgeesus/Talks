@@ -438,7 +438,7 @@
 		<summary>Elliptical Arc</summary>
 		<ul>
 			<li>The <code>A</code>/<code>a</code> path commands create circular or elliptical arcs.</li>
-			<li>Their arguments are the two radii (usually equal), the rotation (usually 0), two 0-1 flags for which of the four possible arcs to use, and the endpoint.</li>
+			<li>Their arguments are the two radii (equal, for circular arcs), the rotation (usually 0), two boolean 0-1 flags for which of the four possible arcs to use, and the endpoint.</li>
 			<li>Yes, that isn't the usual way to specify an ellipse. Like other path commands, we start with a current point, and end up with the current point for the next command.</li>
 		</ul>
 	</details>
@@ -459,13 +459,13 @@
 <article class="slide image interactive" style="background-image: url(img/mavo-svgpath.png)">
 <h1>Exercise: <a href="https://mavo.io/demos/svgpath/">SVG Paths</a></h1></article>
 
-<article class="slide">
+<article class="slide" id="cat">
 	<svg viewBox="0 0 100 100">
 		<path d="m 0 0 v 48 a 50 50 0 0 0 100 0 v -48 l -19 15 a 80 80 0 0 0 -62 0 z " fill="white" />
 	</svg>
 </article>
 
-<article class="slide">
+<article class="slide" id="cat-eyes">
 	<svg viewBox="0 0 100 100">
 		<path d="m 0 0 v 48 a 50 50 0 0 0 100 0 v -48 l -19 15 a 80 80 0 0 0 -62 0 z m 20 45 a 14 14 0 0 0 25 0 a 13 13 0 0 0 -25 0 z m 35 0 a 14 14 0 0 0 25 0 a 13 13 0 0 0 -25 0" fill-rule="evenodd" fill="white" />
 	</svg>
