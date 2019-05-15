@@ -602,6 +602,33 @@
 		</details>
 	</article>
 
+	<article class="slide demo" id="stroke-anim">
+		<textarea class="language-markup">
+			<svg viewBox="0 0 100 100">
+				<path id="heart" d="M 50, 15
+		    c 6,-17 50,-22 49.8,5
+		    c 0,30 -37,20 -49.8,46.4
+		    c -12,-27 -50,-15 -49.6,-46.5
+		    c 0,-27 41,-22 49.6,-4.9 z" />
+			</svg>
+		</textarea>
+		<textarea class="language-css">
+			#heart {
+				stroke: #f06;
+				fill: none;
+				stroke-dasharray: 0 9999;
+				animation: 4s draw infinite alternate;
+			}
+			@keyframes draw {to {stroke-dasharray:276 9999}}
+		</textarea>
+		<details class="notes">
+			<summary>Animated drawing with stroke-dasharray</summary>
+			<ul>
+				<li>The first parameter to the stroke-length animation is the length of the path. If you edit the path, change this too.</li>
+			</ul>
+		</details>
+	</article>
+
 <!-- end of fill and stroke section -->
 </section>
 
