@@ -1,14 +1,3 @@
-# font-level-up
-WebFonts talk originally presented at CSS Conf.Asia, Singapore, 18 November 2015.
+# There and Back Again – a Web Tale
 
-video at https://www.youtube.com/watch?v=Mho5DIT6MWM
-
-video for a later version, at BrazilJS https://www.youtube.com/watch?v=ShQsIE1gI3w
-
-##dependencies
-Requires prism.js, csss slide framework, incrementable, css-edit, css-snippets, css-controls
-
-##View online
-Slides in ready-to-view format with all dependencies installed: https://www.w3.org/Talks/2016/font-level-up/#intro
-and the condensed version for dotCSS
-https://www.w3.org/Talks/2016/font-level-up/powerup#intro
+The core technologies of the Web: HTML, CSS, SVG and the DOM APIs always have a hot new thing, something coming soon that will change everything. That is as true today as it was 20 years ago. But sometimes, these hot things look sort of familiar. And other times, a particular technology takes decades to finally become mainstream and reliable. Why is that, and are we condemned to reinvent the wheel constantly? Drawing on his role as W3C Strategy Specialist on the Core Web, as well as 25 years of Web standardization experience, Chris Lilley will take us on a tour of the past, present and future of the core Web Platform.
