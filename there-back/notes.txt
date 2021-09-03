@@ -1,0 +1,58 @@
+hobbit story - constant near failure, but eventual sucess and return home. even though problems lurk.
+
+1) VRML first, as quick.
+vrml, problem was
+- lack of hardware at affordable, widely deployed scale
+- lack of essential features for model interaction, spatial sound, social interaction
+
+in vrml story, as well as aframe also add webgpu
+
+2) WebFonts next *mostly needs history slides*
+*a few slides from font level up are usable*
+
+print workshop
+
+@font face but two different authoring tools, two different platforms
+general failure
+use notes, dates, from @font-face src explainer
+
+*needs slides*
+disparate communities - atypi chiselling, last typographers of a generation, web will eat our livelihood.
+network engineers, font people just want DRM! layout is not hard, put the characters on the line til you reach the end
+
+demystifying, explaining, understanding enough of the other side not to demonise
+(can be the same, designers and back-end developers)
+
+then building on reliable webfonts (*existing slides*)
+- font features
+- variable fonts
+- chromatic fonts
+
+fonts, problem was
+- lack of trust, respect between technical communities
+- licensing, web is not print, failure to see as opportunity not threat
+- failure to agree on a distribution format
+- could not use typographic features until fonts reliably provided
+
+WOFF, WOFF2, adoption graph
+
+Mention font usage in Asia, still too big, working on it.
+
+3) the color story (from 25 years of pain)
+
+*slides mostly okay. largest part of the talk*
+
+- missing the impact of mobile
+- democratization of WCG screens
+- catching up to WCG (brwsers) vs impatient for HDR (media)
+- doing stuff with it (mix, contrast, api)
+* mention workshop
+
+probably drop the wasm sub story, no time, not much to say
+
+summary
+pull together the lessons
+- find out what is really in the way
+- learn to listen
+    even if you don't like what you hear
+- don't give up!
