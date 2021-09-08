@@ -31,48 +31,47 @@ $$(".multicolour-fake > *").forEach(function(p) {
 /**
  * SLIDESHOW CREATION
  */
-var slideshow = new SlideShow();
 
 $$('.css-control').forEach(function(control) {
     new CSSControl(control);
 });
 
-function insertText(element, text) {
-    var textEvent = document.createEvent('TextEvent');
+// function insertText(element, text) {
+//     var textEvent = document.createEvent('TextEvent');
 
-    textEvent.initTextEvent('textInput', true, true, null, text);
+//     textEvent.initTextEvent('textInput', true, true, null, text);
 
-    element.dispatchEvent(textEvent);
-}
+//     element.dispatchEvent(textEvent);
+// }
 
-$$('textarea').forEach(function(textarea) {
-    if (textarea.parentNode.id != "conic-test") {
-        textarea.setAttribute('data-raw', '');
-    }
+// $$('textarea').forEach(function(textarea) {
+//     if (textarea.parentNode.id != "conic-test") {
+//         textarea.setAttribute('data-raw', '');
+//     }
 
-    new Incrementable(textarea);
-    new CSSSnippet(textarea);
+//     new Incrementable(textarea);
+//     // new CSSSnippet(textarea);
 
-    textarea.addEventListener("keyup", function(evt) {
-        if (evt.keyCode == 13) { // Enter
-            // Get indent
-            var before = this.value.slice(0, this.selectionStart - 1);
-            var indents = before.match(/^\s*/mg);
-            var indent = indents && indents[indents.length - 1];
+//     textarea.addEventListener("keyup", function(evt) {
+//         if (evt.keyCode == 13) { // Enter
+//             // Get indent
+//             var before = this.value.slice(0, this.selectionStart - 1);
+//             var indents = before.match(/^\s*/mg);
+//             var indent = indents && indents[indents.length - 1];
 
-            if (indent) {
-                insertText(this, indent);
-            }
-        }
-    });
+//             if (indent) {
+//                 insertText(this, indent);
+//             }
+//         }
+//     });
 
-    textarea.addEventListener("keydown", function(evt) {
-        if (evt.keyCode == 9) { // Tab
-            insertText(this, "\t");
-            evt.preventDefault();
-        }
-    })
-});
+//     textarea.addEventListener("keydown", function(evt) {
+//         if (evt.keyCode == 9) { // Tab
+//             insertText(this, "\t");
+//             evt.preventDefault();
+//         }
+//     })
+// });
 
 
 

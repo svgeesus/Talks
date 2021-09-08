@@ -1002,13 +1002,17 @@ div.browser-support {
     font-family: LinBio;
     font-size: 350%;
 }
+
 #tabular table {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right;
+    margin: 0 auto;
     font-family: LinBio;
     font-size: 280%;
 }
+
+    #tabular table td {
+        text-align: right;
+    }
+
 #font-variant-numeric pre,
 #fractions pre,
 #tabular pre,
@@ -1275,6 +1279,7 @@ p.quote-attr {
 
 
 .property.slide {
+    align-items: stretch;
     padding: 0;
     text-align: center;
     font-size: 200%;
