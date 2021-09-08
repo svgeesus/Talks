@@ -85,12 +85,13 @@
     font-size: 400%;
     line-height: 1;
     font-weight: normal;
+    text-shadow: 0 .05em .2em rgb(0 0 0 / .5);
 }
 
-#intro h1 strong {
+#intro h1 div {
+    font-family: Rochester;
     color: var(--tan);
-    font-size: 112%;
-    /* To align with 1st line */
+    margin-top: .2em;
 }
 
 #intro h2 {
