@@ -502,22 +502,22 @@ color: lch(55.3% 84.5 10.25, #F06);</code></pre>
         </section>
 
         <section class="image slide" style="background-image: url(img/CSS-Color-5.png)"
-        id="css-color-5">
+        id="css-color-5" >
             <h1>CSS Color 5: manipulating color</h1>
         </section>
 
-        <section class="slide dark" id="css5color-mix">
-            <h1><a href="https://drafts.csswg.org/css-color-5/#color-mix">Mixing colors</a> in CSS Color 5</h1>
+        <section class="slide dark" id="css5color-mix" data-type="CSS Color 5">
+            <h1><a href="https://drafts.csswg.org/css-color-5/#color-mix"  >Mixing colors</a> in CSS Color 5</h1>
             <p>Two colors can be mixed in any colorspace</p>
             <pre style="margin-top:12vh"><code class="language-css">color-mix(in lch teal 65%, olive);</code></pre>
         </section>
 
         <section class="image slide" style="background-color: white; background-image: url(img/CH-mixing3.svg); background-size: 60%"
-        id="css-color-5-mix-diagram">
+        id="css-color-5-mix-diagram"  data-type="CSS Color 5">
             <!-- <h1>Mixing on the CH plane (shortest arc)</h1> -->
         </section>
 
-        <section class="slide dark" id="css5color-contrast">
+        <section class="slide dark" id="css5color-contrast"  data-type="CSS Color 5">
             <h1><a href="https://drafts.csswg.org/css-color-5/#colorcontrast">Most contrasting color</a> in CSS Color 5</h1>
             <p>Base color, list of alternates</p>
             <pre><code class="language-css">--myAccent: #b22222;
@@ -525,7 +525,7 @@ color-contrast(wheat vs tan, sienna, var(--myAccent), #d2691e)</code></pre>
             <p>WCAG Contrast = (Y<sub>b</sub> + 0.05) / (Y<sub>a</sub> + 0.05)</p>
         </section>
 
-        <section class="slide dark" id="css5color-contrast-example">
+        <section class="slide dark" id="css5color-contrast-example"  data-type="CSS Color 5">
             <table id="contrast-table">
                 <tr>
                     <th>Color</th>
@@ -604,8 +604,7 @@ color-contrast(wheat vs tan, sienna, var(--myAccent), #d2691e)</code></pre>
 
         <section class="image slide white" style="background: url(img/John-JFP-Liam-Chris.jpeg) center white no-repeat;
         background-size: cover;" id="bff">
-        <h1 class="delayed">All freinds, really</h1>
-        <h2 class="delayed">John Hudson, Jean-François Porchez, Liam Quin, Chris Lilley</h2>
+        <h1 class="delayed caption">John Hudson, Jean-François Porchez, Liam Quin, Chris Lilley</h1>
         </section>
 
         <section class="slide dark" id="aff-got">
@@ -618,7 +617,7 @@ color-contrast(wheat vs tan, sienna, var(--myAccent), #d2691e)</code></pre>
         </section>
 
         <section class="slide dark" id="aff-notgot">
-            <h1>What didn't we get</h1>
+            <h1>What <em>didn't</em> we get</h1>
             <ul class="delayed-children criteria">
                 <li  class="fail">Downloadable font format</li>
                 <li  class="fail">Consensus on goals</li>
@@ -629,6 +628,12 @@ color-contrast(wheat vs tan, sienna, var(--myAccent), #d2691e)</code></pre>
         background-size: cover;" id="desolation">
         <h1 class="delayed">1997-2011</h1>
         </section>
+
+        <!--
+            competing formats eot, pfr, svg
+            browsers thought fonters want drm, overcharge, license olice
+            fonters thought browsers were thieves, end of an era, everything free
+        -->
 
         <section class="slide dark" id="woff">
             <h1>WOFF (2010-12)</h1>

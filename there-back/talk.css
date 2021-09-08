@@ -69,8 +69,8 @@
 }
 
 #intro {
-    /* background: linear-gradient(to right, transparent 20%, black), url("img/moveable.png") left / cover;
-    background-blend-mode: multiply, normal; */
+    background: linear-gradient(to right, transparent 20%, black), url("img/moveable.png") left / cover;
+    background-blend-mode: multiply, normal;
     text-align: right;
     color: white;
 }
