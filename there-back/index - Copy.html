@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>There and Back Again</title>
+    <link href="../../inspire.js/inspire.css" rel="stylesheet" />
+    <link href="../../inspire.js/theme.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+    <link href="../shared/prism.css" rel="stylesheet" />
+    <script src="../prefixfree/prefixfree.min.js"></script>
+
+</head>
+
+<body class="language-css">
+
+    <section id="for-browser" class="dark slide">
+        <h1>Important</h1> This slide deck was created for use in a controlled environment, during a talk. It works best with a recent Firefox beta at 4k or 1920x1080. It WILL PROBABLY NOT work correctly in
+        other browsers. But the other browsers will catch up. Right? Right??!!
+    </section>
+
+    <header id="intro" class="slide" style="background-image: url(img/scratches.jpg);
+         background-size: cover;">
+        <h1>
+        There &amp;<br>
+        Back Again
+	</h1>
+        <h2><a href="http://w3.org/People#clilley">Chris Lilley</a> <a href="http://twitter.com/svgeesus" class="twitter">@svgeesus</a></h2>
+        <p class="attribution"></p>
+    </header>
+
+    <section id="#intro">
+
+        <section class="slide activity" id="hi2">
+            <img id="mypic" src="img/other-chris.jpg" alt="not me">
+            <p >Hello! <br /><span class="de-emphasize">I’m Chris Lilley</span></p>
+            <p class="delayed">No, I'm not <em>that</em> Chris Lilley</p>
+        </section>
+
+        <section class="slide activity" id="hi">
+            <img id="mypic" src="img/chris-av.jpg" alt="me">
+            <p class="delayed">Hello! <br /><span class="de-emphasize">I’m Chris or @svgeesus</span></p>
+        </section>
+
+        <section class="slide activity" id="w3c">
+            <img src="img/w3c-logo.svg" />
+            <p><a href="http://www.w3.org/People/#clilley">Technical Director at W3C </a></p>
+            <p>ex-W3C Technical Architecture Group</p>
+            <p>W3C Core Web Strategy</p>
+        </section>
+
+        <section class="slide activity" id="svg">
+            <img src="img/svg-logo.svg" />
+            <p><a href="http://www.w3.org/Graphics/SVG/WG/wiki/Secret_Origin_of_SVG#Drivers_and_Deployment">Started SVG <span class="de-emphasize">(1996)</span></a></p>
+            <p><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">SVG WG Chair <span class="de-emphasize">(1998-2006)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="png">
+            <img src="img/png-icon.png" />
+            <p><a href="http://www.w3.org/TR/PNG/">Co-authored PNG <span class="de-emphasize">(1996)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="css">
+            <img src="img/woolly.svg" />
+
+            <ul>
+                <li>CSS WG: <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair <span class="de-emphasize">(1997-2002)</span></a>, Staff contact</li>
+                <li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor <span class="de-emphasize">(@font-face, descriptors)</span></a></li>
+                <li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
+                <li><a href="http://www.w3.org/TR/css4-color/">CSS4 Color co-editor</a></li>
+            </ul>
+        </section>
+
+        <section class="slide activity" id="webfonts">
+            <h1><span class="web">Web</span>Fonts</h1>
+            <ul>
+                <li>Fonts WG Chair <span class="de-emphasize">(1996-1998)</span></li>
+                <!-- all Member-only, sadly -->
+                <li><a href="http://www.w3.org/Fonts/WG/">WOFF 1.0, WOFF 2.0</a></li>
+                <li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
+            </ul>
+        </section>
+
+        <!-- end of hello -->
+    </section>
+
+    <section class="slide darker" id="topics">
+        <h1>Topics for today</h1>
+        <ul class="delayed-children">
+            <!-- filled via js -->
+        </ul>
+    </section>
+
+
+    <section>
+        <header class="image slide" style="background-image: url(img/lifecycle.png);
+         background-size: contain;" id="lifecycle">
+            <h1 style="background: transparent">Standards Lifecycle</h1>
+        </header>
+
+        <section class="slide dark" id="hamsters" data-src="video/hamster.mp4" data-title="Standards development"></section>
+
+        <section class="dark slide quote" id="blend-propose">
+            <h1>Propose, forget, remember</h1>
+            <blockquote>
+                <p class="quote">Maybe something to think about:
+                    when two areas of different color overlap,
+                    could the colors be blended?</p>
+                <p class="quote-attr">—W. Perry, 1995</p>
+            </blockquote>
+        </section>
+
+        <section class="slide image" style="background-image: url(img/comp-blend-rec.png);" id="comp-blend">
+                <h1>Compositing &amp; Blending</h1>
+        </section>
+
+        <section class="slide image" style="background-image: url(img/flow-95.png);" id="flow-95">
+                <h1><a href="https://www.w3.org/TR/WD-csslayout-951220.html">The CSS layout language</a> (1995)</h1>
+        </section>
+
+        <section class="slide image" style="background-image: url(img/regions-14.png);" id="flow-14">
+                <h1><a href="https://www.w3.org/TR/css-regions-1/">CSS Regions Module</a> (2014)</h1>
+        </section>
+
+
+<!--
+        <section class="dark slide definition" id="def">
+            <dl>
+                <dt>Color</dt>
+
+                <dd style="margin-left:20%; margin-right:20%">definition here</dd>
+            </dl>
+        </section
+
+
+        <section class="slide" id="list">
+            <h1>Some heading</h1>
+            <div class="delayed">
+                <p>First</p>
+            </div>
+            <div class="delayed">
+                <p>Second</p>
+            </div>
+        </section>
+
+         <section class="dark slide definition" id="links">
+                <dl><dt>More online</dt>
+                    <dd>
+                        <p>one</p>
+                        <p>two</p>
+                        <p>three/p>
+
+                        <p style="font-size: 50%;">aside</p>
+                    </dd>
+                </dl>
+            </section>
+
+        <section class="dark slide split-definition" id="">
+            <img class="split-image" src="img/foo" alt="prism" />
+
+            <dl class="delayed">
+                <dt>term</dt>
+                <dd>def</dd>
+            </dl>
+        </section>
+-->
+
+        <!-- end of lifecycle section -->
+    </section>
+
+    <section>
+        <header class="image slide bottom-heavy" style="background: url(img/WebAssembly-1024x628.png)
+        center #2D2C2C
+        no-repeat; background-size: contain;" id="webassembly">
+            <h1>WebAssembly</h1>
+        </header>
+
+        <section class="dark slide centered" id="wa-list">
+            <h1>WebAssembly</h1>
+            <div class="container">
+                <img src="img/WebAssembly_Logo.png"  alt="WebAssembly logo"/>
+                <ul class="delayed-children criteria">
+                    <li>cross-platform</li>
+                    <li>secure, sandboxed</li>
+                    <li>statically typed</li>
+                    <li>binary - avoids parsing overhead</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="dark slide centered" id="jvm-list">
+            <h1 class="delayed">Compile to JVM</h1>
+            <div class="container">
+                <img src="img/Java_logo_small.png"  alt="Java logo"/>
+                <ul class="delayed-children criteria">
+                    <li>cross-platform</li>
+                    <li>secure, sandboxed</li>
+                    <li>statically typed</li>
+                    <li>binary - avoids parsing overhead</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="dark slide definition" id="wa-why">
+            <dl><dt>Early experiments</dt>
+                <dd>
+                    <p>asm.js (Mozilla)</p>
+                    <p>NaCL & PNaCl (Google)</p>
+                    <p>Extend JS for performance</p>
+
+                    <p style="font-size: 75%;">while breaking it</p>
+                 </dd>
+            </dl>
+        </section>
+
+        <section class="image slide" style="background-image: url(img/webassembly-cg.png);
+         background-size: contain;" id="wa-cg">
+            <h1 class="delayed">W3C Working Group soon</h1>
+        </section>
+
+        <section class="dark slide centered" id="tanks">
+            <p>
+                <a href="http://webassembly.org/demo/Tanks/" target="_new">
+                    <img src="img/webassembly-tanks.png" alt="webassembly tanks demo"/>
+                </a>
+            </p>
+        </section>
+
+        <!-- nope
+        <section class="dark slide centered" id="tankss" data-src="http://webassembly.org/demo/Tanks/">
+        </section>
+        -->
+
+        <section class="dark slide split-definition" id="wa-jvm-differences">
+            <dl>
+                <dt>JVM</dt>
+                <dd class="delayed">poor multilanguage target, opposed by owner</dd>
+            </dl>
+
+            <dl class="delayed">
+                <dt>WebAssembly</dt>
+                <dd>multilanguage target, consensus-driven, multiple implementations</dd>
+            </dl>
+        </section>
+
+        <!-- end of WebAssembly section -->
+    </section>
+
+    <section>
+
+        <header class="image slide" style="background: url(img/woodletters_o.jpg) center
+         #2D2C2C no-repeat; background-size: cover;" id="fonts">
+            <h1 >WebFonts</h1>
+        </header>
+
+        <section class="slide dark" id="font-history">
+            <article>
+                <h2>@font-face (1998)</h2>
+                <ul class="criteria delayed-children">
+                    <li>Syntax for linking</li>
+                    <li>Descriptors</li>
+                    <li class="fail">No mandatory format</li>
+                </ul>
+            </article>
+            <article>
+                <h2>WOFF (2012)</h2>
+                <ul class="criteria delayed-children">
+                    <li>Some compression</li>
+                    <li>Metadata (license links, etc)</li>
+                    <li>No DRM</li>
+                </ul>
+            </article>
+            <article>
+                <h2>OpenType features</h2>
+                <ul class="criteria delayed-children">
+                    <li>Requires webfonts</li>
+                    <li>Fully utilise modern fonts</li>
+                    <li>Parity with print/DTP</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- end of webfonts section -->
+    </section>
+
+    <section>
+
+        <header class="image slide top-heavy" style="background: url(img/ar.jpg) center #2D2C2C no-repeat;
+        background-size: cover;" id="webvr">
+            <h1>WebVR &amp; AR</h1>
+        </header>
+
+        <section class="dark slide split-definition" id="vrml">
+            <img class="split-image" src="img/VRML-1024x652.jpg" alt="vrml logo"/>
+
+            <dl class="delayed">
+                <dt>VRML (1994)</dt>
+                <dd>static <strong>3D</strong> worlds, hyperlinks, <em>camera</em> control</dd>
+            </dl>
+        </section>
+
+        <section class="image slide white" style="background: url(img/KL_Diamond_Monster3D_Voodoo_1.jpg) center white no-repeat;
+        background-size: contain;" id="lowpower-gpu">
+        <h1 class="delayed">Wildly underpowered hardware</h1>
+        </section>
+
+        <section class="image slide dark" style="background: url(img/tegra-x1-header.jpg) center black no-repeat;
+        background-size: contain;" id="phone-gpu">
+        <h1 class="delayed">(Current phone GPU)</h1>
+        </section>
+
+        <section class="dark slide split-definition" id="vrml-develops">
+            <dl>
+                <dt>VRML97</dt>
+                <dd  class="delayed">interaction, script node, events, animation, sound</dd>
+            </dl>
+
+            <dl class="delayed">
+                <dt>Fragmentation</dt>
+                <dd>many proprietary extensions, no interoperability</dd>
+            </dl>
+        </section>
+
+        <section class="image slide dark" style="background: url(img/gear-vr-controller-lg.jpg) center white no-repeat;
+        background-size: contain;" id="vr-capabilities">
+        <h1 class="delayed">VR input and output capabilities</h1>
+        </section>
+        <section class="dark slide centered" id="webvr-lists">
+            <img src="img/webvr-logo-square.png">
+            <ul class="criteria delayed-children">
+                <li>Detect available Virtual Reality devices</li>
+                <li>Query the devices capabilities</li>
+                <li>Query stage info (floor level, safe bounds)</li>
+                <li>Poll the device’s position and orientation</li>
+                <li>Display imagery on the device, each frame</li>
+            </ul>
+        </section>
+
+        <section class="image slide white" style="background: url(img/webVR-workshop.png) center white no-repeat;
+        background-size: cover;" id="vr-workshop">
+        <h1 class="delayed">W3C Workshop: Web &amp; VR (Oct 2016)</h1>
+        </section>
+
+        <section class="dark slide centered" id="webvr-needs">
+            <h1><a href="https://www.w3.org/2016/06/vr-workshop/">VR on Web needs</a> (from W3C Workshop)</h1>
+            <div>
+            <img src="img/w3c_home_nb-v.svg" style="width: 20vw">
+            <ul class="criteria delayed-children">
+                <li>360° media integration in HTML</li>
+                <li>Positional (immersive) Audio</li>
+                <li>Non-rectangular (spherical) DOM</li>
+                <li>VR mode for CSS media queries</li>
+                <li>Customize user surroundings (Skybox API)</li>
+            </ul>
+            </div>
+        </section>
+
+        <section class="image slide white" style="background: url(img/oculus-touch-35.jpg) center white no-repeat;
+        background-size: cover;" id="vr-hands">
+        <h1 class="delayed">Where are my hands?</h1>
+        </section>
+
+        <section class="slide dark centred" id="aframe-demo" data-src="https://aframe.io/examples/showcase/snowglobe/"></section>
+
+        <section class="image slide white top-heavy" style="background: url(img/Technology-Strategic-Intelligence-873x640.jpg) center white no-repeat;
+        background-size: cover;" id="webar">
+        <h1 class="delayed">Augmented Reality (AR) on the Web</h1>
+        </section>
+
+        <!-- end of webvr section -->
+    </section>
+
+
+
+    <section>
+        <section class="slide dark" id="conclusions">
+                <h1>My Conclusions</h1>
+                <ul class="delayed-children criteria">
+                    <li>Be aware of past efforts</li>
+                    <li>Allow ideas to be tested, iterated, and to fail early</li>
+                    <li>Check feasibility at scale</li>
+                    <li>Ensure multi-vendor buy-in</li>
+                    <li>Active community (polyfils, bug reporting)</li>
+                    <li>Work in public, encourage participation</li>
+                </ul>
+        </section>
+
+        <section class="slide image" style="background-image: url(img/funnel.png);" id="strat-funnel">
+                <h1 class="delayed">W3C Strategy Funnel (on GitHub)</h1>
+        </section>
+
+
+
+
+
+    </section>
+
+
+
+    <footer class="dark slide">
+        <img src="img/chris-av.jpg" alt="me" />
+        <h1>Thank you!</h1>
+        <ul>
+            <li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
+            <li><a href="http://svgees.us">svgees.us</a></li>
+            <li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
+        </ul>
+        <p>Slides: <a href="https://github.com/svgeesus/Talks/there-back">github.com/svgeesus/Talks/there-back/</a></p>
+        <p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
+    </footer>
+
+
+
+    <!-- <script src="https://dev.mavo.io/dist/mavo.min.js"></script> -->
+    <script src="../shared/js/bliss.shy.min.js"></script>
+    <script src="../shared/js/prism.js"></script>
+    <script src="../../incrementable/incrementable.js"></script>
+    <script src="../../inspire.js/inspire.js"></script>
+    <script src="talk.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="284 226 532 373">
+  <defs>
+    <style>
+      .a, .c, .d, .e {
+        fill: none;
+        stroke: #F3D69B;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .a {
+        stroke-width: 1px;
+      }
+
+      .b {
+        font-size: 10.75px;
+        fill: #F3D69B;
+        font-family: Helvetica Neue;
+      }
+
+      .c, .d, .e {
+        stroke-width: 3px;
+      }
+
+      .c {
+        stroke-dasharray: 3 3.75;
+        stroke: #E79D5E;
+      }
+
+      .d {
+        stroke-dasharray: 10 5;
+        stroke: #9D3
+      }
+      .e {
+        stroke: #62F;
+      }
+    </style>
+  </defs>
+	<title>fluorescent spectrum</title>
+	
+  <g>
+    <path class="a" d="M88.5,535.49h460.25m-460.25,0v-302m0,302v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m76.5,2.5v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5M88.5,535.49v-5m153.5,5v-5m153.25,5v-5m153.5,5v-5" transform="translate(244 18.044)"/>
+    <text class="b" transform="translate(320.357 566.034)">400.0</text>
+    <text class="b" transform="translate(473.857 566.034)">500.0</text>
+    <text class="b" transform="translate(627.107 566.034)">600.0</text>
+    <text class="b" transform="translate(780.607 566.034)">700.</text>
+    <text class="b" transform="translate(799.373 566.034)">0</text>
+    <text class="b" transform="translate(523.717 580.534)">Wavelength (nm)</text>
+    <path class="a" d="M88.5,535.49H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5,302h5m-5-75.5h5m-5-75.5h5m-5-75.5h5m-5-75.5h5" transform="translate(244 18.044)"/>
+    <text class="b" transform="translate(312.248 557.034)">0.</text>
+    <text class="b" transform="translate(319.982 557.034)">0</text>
+    <text class="b" transform="translate(312.248 481.534)">0.</text>
+    <text class="b" transform="translate(319.982 481.534)">2</text>
+    <text class="b" transform="translate(312.248 406.034)">0.</text>
+    <text class="b" transform="translate(319.982 406.034)">4</text>
+    <text class="b" transform="translate(312.248 330.534)">0.</text>
+    <text class="b" transform="translate(319.982 330.534)">6</text>
+    <text class="b" transform="translate(312.248 255.042)">0.</text>
+    <text class="b" transform="translate(319.982 255.042)">8</text>
+    
+	<text class="b" transform="translate(302.998 443.8) rotate(-90)">Intensity</text>
+
+	<!-- 
+	400 - 320
+	500 - 473
+	600 - 627
+	700 - 780
+	300nm = 460  
+	x = 1.53 * (wl-400) + 320
+
+	0.0 = 552
+	0.8 = 255
+	-377 for 1.0
+	y = 552 - 377*i
+
+	29 points from 400 to 700 = 10nm
+	-->
+    <polyline class="c" points="332 553 
+	344 548
+	347 495 
+	350 548
+	363 548
+	390 544
+
+	393 439 
+	398 544
+	418 538 
+	422 490 
+	424 486
+	426 485
+	427 487
+	429 510
+	432 530
+	439 548 
+	455 552 
+	
+	470 550 
+	520 535 
+	535 520
+	542 500 
+	547 306 
+	556 525
+	565 545 
+
+	577 535 
+	590 495
+	593 480
+	597 495
+	608 500
+	630 480
+	639 306
+	644  500
+
+	654 510 
+	669 540 
+	685 550 
+	700 540
+	715 548 
+
+	731.248 550 
+	746.748 542 
+	761 550 
+	777 550 
+	789 545
+	792 520"/>
+    
+  </g>
+  <text x="244" y="18.044"/>  
+  <!-- for bbox
+  <rect class="e" x="284" y="226.044" width="532" height="373"/>
+-->
+</svg>

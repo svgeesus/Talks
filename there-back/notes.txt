@@ -1,13 +1,24 @@
 hobbit story - constant near failure, but eventual sucess and return home. even though problems lurk.
 
-1) VRML first, as quick.
+0) Standards lifecycle
+Maybe more on CR, Rec? Fireworks pic
+Incubation
+Stops and starts.
+
+1) the wasm sub story vs jvm. Update for CG (incubation) then WG (standardisation).
+drop #tanks why is this even there
+comment out the tiny fonts part, replace with better later
+
+2) VRML next, as quick.
 vrml, problem was
 - lack of hardware at affordable, widely deployed scale
 - lack of essential features for model interaction, spatial sound, social interaction
 
 in vrml story, as well as aframe also add webgpu
+or drop #aframe-demo for time
 
-2) WebFonts next *mostly needs history slides*
+now, before crappy #conclusions, insert:
+3) WebFonts next *mostly needs history slides*
 *a few slides from font level up are usable*
 
 print workshop
@@ -36,22 +47,24 @@ fonts, problem was
 
 WOFF, WOFF2, adoption graph
 
-Mention font usage in Asia, still too big, working on it.
+Mention font usage in Asia (map from PFE report), still too big, working on it.
 
-3) the color story (from 25 years of pain)
+4) the color story (from 25 years of pain)
 
 *slides mostly okay. largest part of the talk*
 
 - missing the impact of mobile
 - democratization of WCG screens
-- catching up to WCG (brwsers) vs impatient for HDR (media)
+- catching up to WCG (browsers) vs impatient for HDR (media)
 - doing stuff with it (mix, contrast, api)
 * mention workshop
 
-probably drop the wasm sub story, no time, not much to say
+
 
 summary
 pull together the lessons
+- impact of adjacent industries, on different timescales
+- avoid "works in my country"
 - find out what is really in the way
 - learn to listen
     even if you don't like what you hear

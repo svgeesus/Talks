@@ -49,8 +49,8 @@
 
 body {
 	font: 140%/1.5 var(--body-font);
-	background: linear-gradient(45deg, silver 25%, transparent 25%, transparent 75%, silver 75%),
-	            linear-gradient(45deg, silver 25%, transparent 25%, transparent 75%, silver 75%) 20px 20px;
+	/* background: linear-gradient(45deg, silver 25%, transparent 25%, transparent 75%, silver 75%),
+	            linear-gradient(45deg, silver 25%, transparent 25%, transparent 75%, silver 75%) 20px 20px; */
 	background-color: #eee;
 	background-size: 40px 40px;
 }
