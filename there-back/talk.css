@@ -148,11 +148,11 @@
 }
 
 .activity img {
-    height: 55vh;
+    height: 45vh;
 }
 
-#svg.activity img {
-    height: 45vh;
+#png.activity img {
+    height: 55vh;
 }
 
 #webfonts h1 {
@@ -174,7 +174,7 @@
 }
 
 .activity li {
-    margin: .9em 0;
+    margin: .7em 0;
 }
 
 #hi img, #hi2 img {
