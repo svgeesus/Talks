@@ -132,3 +132,44 @@ $$('.show-html').forEach(function(element) {
         element.tooltip.classList.remove('active');
     }
 });
+
+$.bind($("#weight-anim"), "slidechange", evt => {
+    var slide = evt.target;
+
+    requestAnimationFrame(function callee() {
+        var weight = getComputedStyle($(".variable", slide)).fontWeight;
+        weight = Math.round(weight);
+        slide.style.setProperty("--font-weight", `"${weight}"`);
+
+        if (location.hash === "#" + slide.id) {
+            requestAnimationFrame(callee);
+        }
+    }, 50);
+});
+
+
+(async function() {
+    await Inspire.loadPlugin("live-demo");
+
+    Demo.fixers.css.push(css => {
+        /** We want to copy out the values of the numeric descriptors from an @font-palette-values
+        *   rule and create a set of css variable declarations derived from them. So
+        *   @font-palette-values autumnal {
+        *     font-family: Painter Kafeel;
+        *     base-palette: 2;
+    	*     color-0: black;
+    	*     color-1: hsl(15, 75%, 34%);
+    	*     color-2: hsl(15, 80%, 70%);
+        *     }
+        *    becomes
+        *
+        *    --color0: black;
+    	*    --color1: hsl(15, 75%, 34%);
+    	*    --color2: hsl(15, 80%, 70%);
+        */
+        css = css.replace("@font-palette-values autumnal", "#demo")
+                  .replace(/\scolor-(\d+):/g, "\t--color$1:");
+
+        return css;
+    })
+})();

@@ -62,8 +62,7 @@
             <ul>
                 <li>CSS WG: <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair <span class="de-emphasize">(1997-2002)</span></a>, Staff contact</li>
                 <li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor <span class="de-emphasize">(@font-face, descriptors)</span></a></li>
-                <li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
-                <li><a href="http://www.w3.org/TR/css4-color/">CSS4 Color co-editor</a></li>
+                <li><a href="http://www.w3.org/TR/css3-color/">CSS3, <a href="http://www.w3.org/TR/css-color-4/">4</a>, <a href="http://www.w3.org/TR/css-color-5/">5</a> Color co-editor</a></li>
             </ul>
         </section>
 
@@ -74,6 +73,7 @@
                 <!-- all Member-only, sadly -->
                 <li><a href="http://www.w3.org/Fonts/WG/">WOFF 1.0, WOFF 2.0</a></li>
                 <li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
+                <li><a href="http://www.w3.org/TR/css3-fonts/">CSS3, <a href="http://www.w3.org/TR/css-fonts-4/">4</a>, <a href="http://www.w3.org/TR/css-fonts-5/">5</a> Fonts co-editor</a></li>
             </ul>
         </section>
 
@@ -654,40 +654,95 @@ color-contrast(wheat vs tan, sienna, var(--myAccent), #d2691e)</code></pre>
             <p class="figure" style="margin-top:0; margin-bottom: 0;"><img src="img/2020-07-22_Web_Font_Usage.png" style="height:70vh" alt="chart showing 0% usage in 2011 to 80% in 2020" /></p>
         </section>
 
-        <section class="slide dark" id="font-history">
-            <!-- <article>
-                <h2>@font-face (1998)</h2>
-                <ul class="criteria delayed-children">
-                    <li>Syntax for linking</li>
-                    <li>Descriptors</li>
-                    <li class="fail">No mandatory format</li>
-                </ul>
-            </article> -->
-            <!-- <article>
-                <h2>WOFF (2012)</h2>
-                <ul class="criteria delayed-children">
-                    <li>Some compression</li>
-                    <li>Metadata (license links, etc)</li>
-                    <li>No DRM</li>
-                </ul>
-            </article> -->
-            <article>
-                <h2>OpenType features</h2>
-                <ul class="criteria delayed-children">
-                    <li>Requires webfonts</li>
-                    <li>Fully utilise modern fonts</li>
-                    <li>Parity with print/DTP</li>
-                </ul>
-            </article>
+        <section class="slide dark" id="OTF-sample" data-type="CSS Fonts 3">
+            <h1>OpenType features can be used</h1>
+            <p>CAPITALE FULGURANT</p>
+            <p class="modeste">et modeste avec ça</p>
+            <p>INCROYABLE astrale </p>
+        </section>
+
+        <section class="property light slide" id="fractions" mv-app  data-type="CSS Fonts 3">
+            <p class="figure" style="font-variant-numeric: [value];">
+                1/2 3/4 5/8<br /> 13/27 86/483
+            </p>
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric:</code> <select  class="mv-autosize" property="value">
+			<option>normal</option>
+			<option>diagonal-fractions</option>
+		</select>;</pre>
+        </section>
+
+        <section class="property light slide" id="tabular" mv-app  data-type="CSS Fonts 3">
+            <table class="" style="font-variant-numeric: [value];" >
+                <tr>
+                    <td>112,113.56</td>
+                </tr>
+                <tr>
+                    <td>89,546.87</td>
+                </tr>
+                <tr>
+                    <td>286,111.10</td>
+                </tr>
+            </table>
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric:</code> <select class="mv-autosize"  property="value">
+			<option>proportional-nums</option>
+			<option>tabular-nums</option>
+		</select>;</pre>
+        </section>
+
+        <!-- <section class="property light slide" id="sinf" mv-app  data-type="CSS Fonts 3">
+            <p class="figure" style="font-feature-settings: [value];">C12H22O11 + HCl → CH3COH + ClO2 + H2O</p>
+            <pre class="no-whitespace-normalization"><code>font-feature-settings:</code> <select class="mv-autosize" property="value">
+			<option>normal</option>
+			<option>"sinf"</option>
+		</select>;</pre>
+        </section> -->
+
+        <section class="slide dark" id="weight-anim" data-type="CSS Fonts 4">
+            <h1>Variable fonts</h1>
+            <ul class="wdemo">
+                <li class="w300">Kairos Sans 300</li>
+                <li class="w800 delayed">Kairos Sans 800</li>
+                <li class="variable delayed">Kairos Sans</li>
+            </ul>
+        </section>
+
+        <section class="horizontal demo slide" id="svg-palette-demo" data-type="CSS fonts 4">
+
+            <div class="multicolour-fake" id="demo">
+                <p>Painter Kaffeel</p>
+            </div>
+            <!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
+            <textarea class="language-css">@font-palette-values autumnal {
+font-family: Painter Kafeel; base-palette: 2;
+color-0: white;
+color-1: hsl(15, 75%, 34%);
+color-2: hsl(15, 80%, 70%);
+color-3: hsl(15, 75%, 53%);
+color-4: hsl(15, 75%, 40%);
+color-5: orange;
+color-6: hsl(58, 15%, 56%);
+color-7: hsl(58, 15%, 65%);
+color-8: hsl(58, 15%, 46%);
+color-9: hsl(58, 15%, 30%); }</textarea>
+        </section>
+
+        <section class="slide white" id="not-in-asia">
+            <h1>Are We There Yet?</h1>
+            <p class="figure" style="margin-top:0; margin-bottom: 0;"><img src="img/httparchive-china-zero.png" style="height:70vh" alt="median webfont size in china is zero" /></p>
         </section>
 
         <!-- end of webfonts section -->
     </section>
 
-
     <section>
-        <section class="slide dark" id="conclusions">
-                <h1>My Conclusions</h1>
+
+        <header class="image slide" style="background: url(img/Colouring_pencils.jpg) center
+        #2D2C2C no-repeat; background-size: cover;" id="the-end">
+            <h1 >Conclusions</h1>
+        </header>
+
+          <section class="slide dark" id="conclusions">
+                <h1>What can we learn from this</h1>
                 <ul class="delayed-children criteria">
                     <li>Be aware of past efforts</li>
                     <li>Prototype, test, iterate</li>
@@ -703,10 +758,6 @@ color-contrast(wheat vs tan, sienna, var(--myAccent), #d2691e)</code></pre>
         <section class="slide image" style="background-image: url(img/funnel.png);" id="strat-funnel">
                 <h1 class="delayed">W3C Strategy Funnel (on GitHub)</h1>
         </section>
-
-
-
-
 
     </section>
 

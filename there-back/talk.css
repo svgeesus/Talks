@@ -55,6 +55,12 @@
     src: url(fonts/EmojiOneColor-SVGinOT.ttf);
 }
 
+@font-face {
+    font-family: "Kairos Sans";
+    src: url(fonts/KairosSans_Variable.ttf);
+    font-weight: 250 900;
+}
+
 #for-browser {
     background: #333;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -63,8 +69,8 @@
 }
 
 #intro {
-    background: linear-gradient(to right, transparent 20%, black), url("img/moveable.png") left / cover;
-    background-blend-mode: multiply, normal;
+    /* background: linear-gradient(to right, transparent 20%, black), url("img/moveable.png") left / cover;
+    background-blend-mode: multiply, normal; */
     text-align: right;
     color: white;
 }
@@ -1213,7 +1219,7 @@ p.quote-attr {
         margin-top: 0.8em;
         margin-left: 4em;
     }
-       
+
 #aframe-demo iframe {
     overflow: hidden
 }
@@ -1266,3 +1272,128 @@ p.quote-attr {
         background: hsla(0,0%,100%,.5);
         font-size: 200%;
     }
+
+
+.property.slide {
+    padding: 0;
+    text-align: center;
+    font-size: 200%;
+    background: var(--light1);
+    color: var(--dark1);
+}
+
+    .property.slide pre {
+        margin-top: 1em;
+    }
+
+    .property.slide pre input[type="number"] {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+    }
+
+    .property.slide td {
+        padding: 0;
+    }
+
+    #font-variant-numeric p,
+    #fractions p,
+    #no-fake-bold-italic p {
+        margin: 0;
+        font-family: LinBio;
+        font-size: 350%;
+    }
+
+    #tabular table {
+        margin: 0 auto;
+        text-align: right;
+        font-family: LinBio;
+        font-size: 280%;
+    }
+
+    .property.slide select {
+        text-align: right;
+    }
+
+    #font-variant-numeric2 .figure, #font-variant-numeric3 .figure {
+        font-family: Source Sans Pro, Adobe Caslon Pro, serif;
+    }
+
+    #sinf {
+
+    }
+
+        #sinf .figure {
+            font-family: 'Source Sans Pro';
+            font-size: 200%;
+        }
+
+
+        #weight-anim {
+            align-items: center;
+            font-family: "Kairos Sans";
+            line-height: 1;
+            padding: 2em;
+        }
+
+            #weight-anim ul {
+                flex: 1;
+                display: flex;
+                flex-flow: column;
+                width: fit-content;
+                width: -moz-fit-content;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                font-size: 150%;
+                color: var(--light1, white);
+            }
+
+            #weight-anim ul::before {
+                content: '';
+                position: absolute;
+                top: .6em;
+                bottom: .5em;
+                left: -.74em;
+                width: .1em;
+                background: currentColor;
+            }
+
+            #weight-anim li {
+                white-space: nowrap;
+            }
+
+            #weight-anim .w300 {
+                font-weight: 300;
+            }
+
+            #weight-anim .w800 {
+                margin-top: auto;
+                font-weight: 800;
+            }
+
+            @keyframes weight {
+                from, 5% {
+                    font-weight: 300;
+                    top: 0;
+                }
+
+                95%, to {
+                    font-weight: 800;
+                    top: calc(100% - 1em);
+                }
+            }
+
+            #weight-anim .variable {
+                position: absolute;
+                top: 0;
+                font-weight: 300;
+                color: var(--medium1, var(--light1, white));
+            }
+
+            #weight-anim .variable::after {
+                content: " " var(--font-weight, "300");
+            }
+
+            #weight-anim .variable.current {
+                animation: weight 3s linear infinite alternate;
+            }
