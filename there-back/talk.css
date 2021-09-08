@@ -147,6 +147,11 @@
     height: 55vh;
 }
 
+#svg.activity img,
+#webfonts.activity img {
+    height: 45vh;
+}
+
 .activity a:not(:hover) {
     text-decoration: none;
 }
