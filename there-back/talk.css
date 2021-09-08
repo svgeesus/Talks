@@ -95,16 +95,20 @@
 }
 
 #intro h2 {
-    width: 8em;
+    max-width: 10em;
+    text-align: right;
     margin: .4em 0 0;
-    font-size: 200%;
-    line-height: 1;
+    font: 150%/1.2 var(--heading-font);
     text-decoration: none;
     position: absolute;
     right: .8em;
     bottom: .8em;
     color: inherit;
 }
+
+    #intro h2::first-line {
+        font-weight: bold;
+    }
 
 #intro a {
     text-decoration: none;
